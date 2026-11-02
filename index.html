@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Socratic Chat</title><link rel="stylesheet" href="public/style.css"></head>
+<body>
+  <main class="shell">
+    <header><div><span class="mark">S</span><strong>Socratic Chat</strong></div><span id="status" aria-live="polite">Connecting…</span></header>
+    <section id="entry" class="entry"><div><p class="eyebrow">ONE ROOM. EVERYONE WELCOME.</p><h1>Come on in.</h1><p>Pick a nickname and join the conversation.</p><form id="join"><label for="nickname">Your nickname</label><input id="nickname" maxlength="30" required placeholder="What should we call you?" autocomplete="nickname"><button>Join the chat <span>→</span></button></form></div></section>
+    <section id="chat" class="chat" hidden><div class="room"><div><h1>Public chat</h1><p>One shared space for everyone.</p></div><button id="change" class="quiet" type="button">Change nickname</button></div><div id="messages" class="messages" aria-live="polite"></div><div id="notice" role="status"></div><div id="emoji-picker" class="picker" hidden><strong>Choose an emoji</strong><div id="emojis"></div></div><div id="picker" class="picker" hidden><div class="picker-head"><strong>Find a GIF</strong><button id="close-picker" class="quiet" type="button">Close</button></div><input id="gif-search" placeholder="Search GIFs" aria-label="Search GIFs"><div id="gifs" class="gifs"></div><small>Powered by KLIPY</small></div><form id="composer"><div id="attachment" hidden></div><textarea id="text" maxlength="2000" rows="2" placeholder="Say something…" aria-label="Message"></textarea><div class="toolbar"><div><button type="button" id="emoji" class="tool" aria-label="Insert emoji">☺</button><button type="button" id="gif" class="tool">GIF</button><label class="tool upload" for="file" title="Attach image or video">＋</label><input id="file" type="file" accept="image/jpeg,image/png,image/gif,image/webp,video/mp4,video/webm" hidden></div><button id="send">Send <span>↗</span></button></div></form></section>
+  </main><script type="module" src="public/app.js"></script>
+</body></html>
